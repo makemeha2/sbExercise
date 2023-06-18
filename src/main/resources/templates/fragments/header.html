@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:fragment="header">
+<head th:fragment="header(param1)">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Welcome to Salsa land!!</title>
+    <title th:text="${param1} + ' :: Salsa Land'">Welcome to Salsa land!!</title>
 
     <!-- mobile responsive meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
