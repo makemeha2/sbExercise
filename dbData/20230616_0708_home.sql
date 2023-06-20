@@ -15,27 +15,23 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
--- MFS_DB 데이터베이스 구조 내보내기
-DROP DATABASE IF EXISTS `MFS_DB`;
-CREATE DATABASE IF NOT EXISTS `mfs_db` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci */;
-USE `MFS_DB`;
+CREATE TABLE IF NOT EXISTS TABLE `tb_liveshop` (
+                               `Idx` TINYINT(3) UNSIGNED NOT NULL AUTO_INCREMENT,
+                               `Title` VARCHAR(200) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+                               `Description` VARCHAR(500) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+                               `PageUrl` VARCHAR(500) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+                               `ImageUrl` VARCHAR(500) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+                               `UseYN` BIT(1) NOT NULL,
+                               `CreateId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+                               `CreateDate` DATETIME NOT NULL DEFAULT current_timestamp(),
+                               `UpdateId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+                               `UpdateDate` DATETIME NOT NULL DEFAULT current_timestamp(),
+                               INDEX `Idx` (`Idx`) USING BTREE
+)
+COMMENT='라이브 쇼핑 URL\r\n'
+COLLATE='utf8mb4_unicode_ci'
+;
 
--- 테이블 MFS_DB.tb_board 구조 내보내기
-DROP TABLE IF EXISTS `tb_board`;
-CREATE TABLE IF NOT EXISTS `tb_board` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL,
-  `content` text NOT NULL,
-  `author` varchar(50) NOT NULL,
-  `create_dt` timestamp NOT NULL DEFAULT current_timestamp(),
-  `update_dt` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+INSERT INTO `mfs_db`.`tb_liveshop` (`Title`, `Description`, `PageUrl`, `ImageUrl`, `UseYN`, `CreateId`, `UpdateId`) VALUES ('테스트입니다.', '테스트입니다. 2016일 방송', 'https://view.shoppinglive.naver.com/replays/1011400?fm=shoppinglive&sn=home', 'https://g-selected.pstatic.net/MjAyMzA0MTBfMjAw/MDAxNjgxMDk5MDAxOTkx.2S-iuB3zk42DLyRTfrK1YU6qLbwBlqRU4xB-yP8hjugg.RDnnLq-W1zb2LzUnLcgjl6QQzJOfePmw4oBXXFMdUesg.PNG/image.png?type=f320_480_q90', b'1', '정소영', '정소영');
+INSERT INTO `mfs_db`.`tb_liveshop` (`Title`, `Description`, `PageUrl`, `ImageUrl`, `UseYN`, `CreateId`, `UpdateId`) VALUES ('테스트입니다.', '테스트입니다. 2016일 방송', 'https://view.shoppinglive.naver.com/replays/1011400?fm=shoppinglive&sn=home', 'https://g-selected.pstatic.net/MjAyMzA0MTBfMjAw/MDAxNjgxMDk5MDAxOTkx.2S-iuB3zk42DLyRTfrK1YU6qLbwBlqRU4xB-yP8hjugg.RDnnLq-W1zb2LzUnLcgjl6QQzJOfePmw4oBXXFMdUesg.PNG/image.png?type=f320_480_q90', b'1', '정소영', '정소영');
 
--- 내보낼 데이터가 선택되어 있지 않습니다.
-
-/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
-/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;

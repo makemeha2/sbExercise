@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.noname.sbExersise.repository.LiveShoppingMapper">
+    <select id="getAllTests" resultType="com.noname.sbExersise.repository.entity.LiveShoppingItem">
+        SELECT * FROM tb_liveshop
+    </select>
+
+</mapper>
