@@ -16,7 +16,7 @@
 
 
 CREATE TABLE IF NOT EXISTS TABLE `tb_liveshop` (
-                               `Idx` TINYINT(3) UNSIGNED NOT NULL AUTO_INCREMENT,
+                               `Idx` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
                                `Title` VARCHAR(200) NOT NULL COLLATE 'utf8mb4_unicode_ci',
                                `Description` VARCHAR(500) NOT NULL COLLATE 'utf8mb4_unicode_ci',
                                `PageUrl` VARCHAR(500) NOT NULL COLLATE 'utf8mb4_unicode_ci',
@@ -26,10 +26,13 @@ CREATE TABLE IF NOT EXISTS TABLE `tb_liveshop` (
                                `CreateDate` DATETIME NOT NULL DEFAULT current_timestamp(),
                                `UpdateId` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_unicode_ci',
                                `UpdateDate` DATETIME NOT NULL DEFAULT current_timestamp(),
+                               PRIMARY KEY (`Idx`) USING BTREE,
                                INDEX `Idx` (`Idx`) USING BTREE
 )
 COMMENT='라이브 쇼핑 URL\r\n'
 COLLATE='utf8mb4_unicode_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=3
 ;
 
 INSERT INTO `mfs_db`.`tb_liveshop` (`Title`, `Description`, `PageUrl`, `ImageUrl`, `UseYN`, `CreateId`, `UpdateId`) VALUES ('테스트입니다.', '테스트입니다. 2016일 방송', 'https://view.shoppinglive.naver.com/replays/1011400?fm=shoppinglive&sn=home', 'https://g-selected.pstatic.net/MjAyMzA0MTBfMjAw/MDAxNjgxMDk5MDAxOTkx.2S-iuB3zk42DLyRTfrK1YU6qLbwBlqRU4xB-yP8hjugg.RDnnLq-W1zb2LzUnLcgjl6QQzJOfePmw4oBXXFMdUesg.PNG/image.png?type=f320_480_q90', b'1', '정소영', '정소영');
