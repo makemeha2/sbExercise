@@ -21,9 +21,4 @@ public class LiveShoppingService {
     {
         return repository.getList(pageIndex, pageSize, searchText);
     }
-
-    public String getTest(Integer pageIndex, Integer pageSize, String searchText)
-    {
-        return repository.getTest(pageIndex, pageSize, searchText);
-    }
 }

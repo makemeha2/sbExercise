@@ -15,7 +15,7 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
-CREATE TABLE IF NOT EXISTS TABLE `tb_liveshop` (
+CREATE TABLE IF NOT EXISTS `tb_liveshop` (
                                `Idx` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
                                `Title` VARCHAR(200) NOT NULL COLLATE 'utf8mb4_unicode_ci',
                                `Description` VARCHAR(500) NOT NULL COLLATE 'utf8mb4_unicode_ci',

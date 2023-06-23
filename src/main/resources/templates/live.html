@@ -1,10 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments/header :: header('Home')">
+    <title>HomePage</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 </head>
+
 <body>
+
+<div th:replace="fragments/bodyHeader :: bodyHeader" />
+
+<!-- page-title -->
+<section class="section bg-secondary">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h4>라이브 쇼핑 </h4>
+                <h6>
+                라이브쇼핑의 열정적인 쇼핑 호스트 <b>살사</b>입니다. <br/>
+                제 전문성과 다양한 경험을 바탕으로 고객 여러분께 최상의 쇼핑 경험을 선사하기 위해 노력하고 있습니다. <br />
+                전문적인 상품 지식과 창의적인 마케팅을 통해 상품을 효과적으로 전달하고, 자신감과 열정 넘치는 모습으로 고객들과의 신뢰를 구축합니다. <br />
+                함께하는 시간이 보람차고 즐거운 쇼핑이 되도록 최선을 다하겠습니다.  <p /><p />
+                </h6>
+                <svg xmlns="http://www.w3.org/2000/svg" width="79" height="28" viewBox="0 0 79 28" focusable="false" aria-hidden="false" aria-labelledby="wa_logo_title" role="img" class="Logo_icon_default_Nehqm"><title id="wa_logo_title">쇼핑라이브</title><defs><linearGradient id="logo_svg__a" x1="49.999%" x2="49.999%" y1="4.561%" y2="105.472%"><stop offset="0%" stop-color="#F4361D"></stop><stop offset="100%" stop-color="#F61C00"></stop></linearGradient></defs><g fill="none" fill-rule="evenodd"><path fill="url(#logo_svg__a)" d="M77.605.806l-38.07 2.316a1.007 1.007 0 00-.946 1.006v17.376c0 .533.414.974.946 1.007l4.651.282v4.784c0 .166.188.261.322.163l6.153-4.554 26.944 1.64a1.009 1.009 0 001.07-1.006V1.813a1.01 1.01 0 00-1.07-1.007"></path><path fill="#1E1E1E" d="M13.196 13.841h-2.524a.216.216 0 00-.216.216v3.623H7.885v-3.623a.215.215 0 00-.216-.216H5.145a.216.216 0 00-.216.216v3.623H.354a.215.215 0 00-.215.215v2.122c0 .12.096.216.215.216h17.633a.216.216 0 00.215-.216v-2.122a.215.215 0 00-.215-.215h-4.575v-3.623a.216.216 0 00-.216-.216"></path><path fill="#1E1E1E" d="M2.985 14.204L9.17 9.418l6.186 4.786a.215.215 0 00.303-.041l1.403-1.873a.219.219 0 00-.041-.3L11.34 7.6a1.635 1.635 0 01-.632-1.29V4.222a.215.215 0 00-.215-.215H7.847a.214.214 0 00-.215.215V6.31c0 .505-.234.98-.633 1.29L1.32 11.99a.216.216 0 00-.041.3l1.401 1.873c.072.095.21.115.304.04M31.886 3.414v10.028c0 .12.097.216.217.216h2.544c.12 0 .215-.097.215-.216V3.414a.215.215 0 00-.215-.216h-2.544a.217.217 0 00-.217.216m-8.902 7.28h2.78V6.103h-2.78v4.59zm6.983 0H28.49V6.102h1.478c.12 0 .215-.096.215-.215V3.85a.215.215 0 00-.215-.216H18.706a.216.216 0 00-.215.216v2.037c0 .119.097.215.215.215h1.543v4.592h-1.543a.215.215 0 00-.215.215v2.037c0 .119.097.215.215.215h11.261c.12 0 .215-.096.215-.215v-2.037a.215.215 0 00-.215-.215zm1.237 8.586c0 1.336-1.14 2.424-2.54 2.424-1.401 0-2.54-1.088-2.54-2.424 0-1.336 1.139-2.423 2.54-2.423 1.4 0 2.54 1.087 2.54 2.423m-2.54-5.116c-2.97 0-5.386 2.295-5.386 5.116 0 2.821 2.416 5.116 5.386 5.116 2.969 0 5.385-2.295 5.385-5.116 0-2.821-2.416-5.116-5.385-5.116"></path><path fill="#FFF" d="M46.525 7.175h-2.339v11.012h6.52v-2.319h-4.181zm6.159 11.012h2.339V7.175h-2.339zm21.067-8.693V7.175h-6.882v11.012h6.882v-2.319h-4.544v-2.104h3.8v-2.319h-3.8V9.494zM63.035 7.175l-1.954 8.223-1.953-8.223h-2.467l3.01 11.012h2.821l3.009-11.012z"></path></g></svg>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /page-title -->
+
+<!-- category post -->
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row masonry-container pt-5">
+                    <div class="col-sm-6 mb-5">
+                        <article class="text-center">
+                            <img class="img-fluid mb-4" src="images/masonary-post/post-1.jpg" alt="post-thumb">
+                            <p class="text-uppercase mb-2">TRAVEL</p>
+                            <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                ex
+                                ea commodo consequat.</p>
+                            <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 mb-5">
+                        <article class="text-center">
+                            <img class="img-fluid mb-4" src="images/masonary-post/post-2.jpg" alt="post-thumb">
+                            <p class="text-uppercase mb-2">TRAVEL</p>
+                            <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                ex
+                                ea commodo consequat.</p>
+                            <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 mb-5">
+                        <article class="text-center">
+                            <img class="img-fluid mb-4" src="images/masonary-post/post-3.jpg" alt="post-thumb">
+                            <p class="text-uppercase mb-2">TRAVEL</p>
+                            <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                ex
+                                ea commodo consequat.</p>
+                            <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 mb-5">
+                        <article class="text-center">
+                            <img class="img-fluid mb-4" src="images/masonary-post/post-4.jpg" alt="post-thumb">
+                            <p class="text-uppercase mb-2">TRAVEL</p>
+                            <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                ex
+                                ea commodo consequat.</p>
+                            <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 mb-5">
+                        <article class="text-center">
+                            <img class="img-fluid mb-4" src="images/masonary-post/post-8.jpg" alt="post-thumb">
+                            <p class="text-uppercase mb-2">TRAVEL</p>
+                            <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                ex
+                                ea commodo consequat.</p>
+                            <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 mb-5">
+                        <article class="text-center">
+                            <img class="img-fluid mb-4" src="images/masonary-post/post-10.jpg" alt="post-thumb">
+                            <p class="text-uppercase mb-2">TRAVEL</p>
+                            <h4 class="title-border"><a class="text-dark" href="blog-single.html">Charming Evening Field</a></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                ex
+                                ea commodo consequat.</p>
+                            <a href="blog-single.html" class="btn btn-transparent">read more</a>
+                        </article>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <nav>
+                            <ul class="pagination justify-content-center align-items-center">
+                                <li class="page-item">
+                                    <span class="page-link">&laquo; Previous</span>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">01</a></li>
+                                <li class="page-item active">
+                                    <span class="page-link">02</span>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">03</a></li>
+                                <li class="page-item"><a class="page-link" href="#">04</a></li>
+                                <li class="page-item"><a class="page-link" href="#">05</a></li>
+                                <li class="page-item"><a class="page-link" href="#">06</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next &raquo;</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- /blog post -->
+            <div class="col-lg-4">
+                <div class="widget search-box">
+                    <i class="ti-search"></i>
+                    <input type="search" id="search-post" class="form-control border-0 pl-5" name="search-post"
+                           placeholder="Search">
+                </div>
+                <div class="widget">
+                    <h6 class="mb-4">LATEST POST</h6>
+                    <div class="media mb-4">
+                        <div class="post-thumb-sm mr-3">
+                            <img class="img-fluid" src="images/masonary-post/post-1.jpg" alt="post-thumb">
+                        </div>
+                        <div class="media-body">
+                            <ul class="list-inline d-flex justify-content-between mb-2">
+                                <li class="list-inline-item">Post By Jhon</li>
+                                <li class="list-inline-item">June 2, 2018</li>
+                            </ul>
+                            <h6><a class="text-dark" href="blog-single.html">Lorem ipsum dolor sit amet, consectetur</a></h6>
+                        </div>
+                    </div>
+                    <div class="media mb-4">
+                        <div class="post-thumb-sm mr-3">
+                            <img class="img-fluid" src="images/masonary-post/post-6.jpg" alt="post-thumb">
+                        </div>
+                        <div class="media-body">
+                            <ul class="list-inline d-flex justify-content-between mb-2">
+                                <li class="list-inline-item">Post By Jhon</li>
+                                <li class="list-inline-item">June 2, 2018</li>
+                            </ul>
+                            <h6><a class="text-dark" href="blog-single.html">Lorem ipsum dolor sit amet, consectetur</a></h6>
+                        </div>
+                    </div>
+                    <div class="media mb-4">
+                        <div class="post-thumb-sm mr-3">
+                            <img class="img-fluid" src="images/masonary-post/post-3.jpg" alt="post-thumb">
+                        </div>
+                        <div class="media-body">
+                            <ul class="list-inline d-flex justify-content-between mb-2">
+                                <li class="list-inline-item">Post By Jhon</li>
+                                <li class="list-inline-item">June 2, 2018</li>
+                            </ul>
+                            <h6><a class="text-dark" href="blog-single.html">Lorem ipsum dolor sit amet, consectetur</a></h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="widget">
+                    <h6 class="mb-4">TAG</h6>
+                    <ul class="list-inline tag-list">
+                        <li class="list-inline-item m-1"><a href="blog-single.html">ui ux</a></li>
+                        <li class="list-inline-item m-1"><a href="blog-single.html">developmetns</a></li>
+                        <li class="list-inline-item m-1"><a href="blog-single.html">travel</a></li>
+                        <li class="list-inline-item m-1"><a href="blog-single.html">article</a></li>
+                        <li class="list-inline-item m-1"><a href="blog-single.html">travel</a></li>
+                        <li class="list-inline-item m-1"><a href="blog-single.html">ui ux</a></li>
+                        <li class="list-inline-item m-1"><a href="blog-single.html">article</a></li>
+                        <li class="list-inline-item m-1"><a href="blog-single.html">developmetns</a></li>
+                    </ul>
+                </div>
+                <div class="widget">
+                    <h6 class="mb-4">CATEGORIES</h6>
+                    <ul class="list-inline tag-list">
+                        <li class="list-inline-item m-1"><a href="blog-single.html">ui ux</a></li>
+                        <li class="list-inline-item m-1"><a href="blog-single.html">developmetns</a></li>
+                        <li class="list-inline-item m-1"><a href="blog-single.html">travel</a></li>
+                        <li class="list-inline-item m-1"><a href="blog-single.html">article</a></li>
+                        <li class="list-inline-item m-1"><a href="blog-single.html">travel</a></li>
+                        <li class="list-inline-item m-1"><a href="blog-single.html">ui ux</a></li>
+                        <li class="list-inline-item m-1"><a href="blog-single.html">article</a></li>
+                        <li class="list-inline-item m-1"><a href="blog-single.html">developmetns</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /category post -->
+
+<!-- instagram -->
+<section th:replace="fragments/instagramSection :: instaSection" />
+<!-- /instagram -->
+
+<div th:replace="fragments/footer :: footer" />
 
 </body>
 </html>

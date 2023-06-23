@@ -8,23 +8,22 @@
             Idx
             , Title
             , Description
-            , '' as PageUrl
-            , '' as ImageUrl
+            , PageUrl as PageUrl
+            , ImageUrl as ImageUrl
             , UseYN
             , CreateId
-            , now() as CreateDate
-            , '' as UpdateId
-            , now() as UpdateDate
+            , CreateDate
+            , UpdateId
+            , UpdateDate
         FROM tb_liveshop
         WHERE
-            UseYN = 1 AND
-            Idx > ((#{pageIndex} - 1) * #{pageSize})
+            UseYN = 1
+            AND Idx > ((#{pageIndex} - 1) * #{pageSize})
+            <if test="@com.noname.sbExersise.util.EmptyHandler@notEmpty(searchText)">
+            AND (Title like concat('%', #{searchText}, '%') OR Description like concat('%', #{searchText}, '%'))
+            </if>
         ORDER BY Idx DESC
         LIMIT #{pageSize}
-    </select>
-
-    <select id="getTest" resultType="String">
-        SELECT (#{pageIndex} + #{pageSize}) / 2 from tb_liveshop ORDER BY Idx LIMIT 1;
     </select>
 
 </mapper>

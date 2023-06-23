@@ -12,9 +12,4 @@ public interface LiveShoppingMapper {
             @Param("pageIndex") Integer pageIndex,
             @Param("pageSize") Integer pageSize,
             @Param("searchText") String searchText);
-
-    String getTest(
-            @Param("pageIndex") Integer pageIndex,
-            @Param("pageSize") Integer pageSize,
-            @Param("searchText") String searchText);
 }
